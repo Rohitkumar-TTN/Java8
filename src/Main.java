@@ -42,28 +42,28 @@ class GreetingImpl implements Greeting {
 public class Main {
     public static void main(String[] args) {
 
-        // ✅ Lambda Expression
+        //  Lambda Expression
         Runnable task = () -> System.out.println("Lambda says Hello!");
         task.run();
 
-        // ✅ Functional Interface
+        //  Functional Interface
         Predicate<String> isLong = s -> s.length() > 4;
         System.out.println("Is 'Rohit' long? " + isLong.test("Rohit"));
 
-        // ✅ Optional
+        // Optional
         Optional<String> maybeName = Optional.of("Anurag");
         maybeName.ifPresent(n -> System.out.println("Name in Optional: " + n));
 
-        // ✅ Method Reference
+        //  Method Reference
         List<String> sample = Arrays.asList("one", "two", "three");
         sample.forEach(System.out::println);
 
-        // ✅ Default Method in Interface
+        //  Default Method in Interface
         Greeting g = new GreetingImpl();
         g.sayHello();
         g.sayBye();
 
-        // ✅ Date and Time API
+        //  Date and Time API
         LocalDate date = LocalDate.now();
         LocalTime time = LocalTime.now();
         System.out.println("Today: " + date + ", Time: " + time);
